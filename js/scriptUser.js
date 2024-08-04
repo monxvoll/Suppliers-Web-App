@@ -7,9 +7,11 @@ function validateUser(){
     .then(response => response.json())
     .then(response => {
       if(response === "True"){
-        window.location.href="./../dashboard.html";
-      }else{
-        alert("El usuario no se encuentra registrado.");
+        window.location.href="dashboard.html";
+      }else if(response ==="Null"){
+        alert("Por favor rellene los campos.");
+      }else if(response === "False"){
+        alert("El usuario no se encuentra registrado.")
       }
 
 
@@ -19,9 +21,6 @@ function validateUser(){
 function registerUser(){
   var userName = document.getElementById("textUser").value;
   var userPassword = document.getElementById("textPassword").value;
-
-
-
 
   var user = {
     userName: userName,
@@ -44,6 +43,32 @@ function registerUser(){
         alert("Usuario Añadido con exito");
       }else{
         alert("El usuario ya se encuentra registrado");
+      }
+
+    })
+    .catch( error => console.error('Error: ', error));
+}
+
+
+
+function deleteUser(){
+  var name = document.getElementById("textUser").value;
+  var password = document.getElementById("textPassword").value;
+
+  fetch('http://localhost:8080/SupplierAPI/rest/ManagementUser/deleteUser?name=' +name + '&password=' + password,{
+    method: 'DELETE'
+  })
+
+    .then(response => response.json())
+    .then(response => {
+      if(response === "Null") {
+        alert("Por favor llena los campos");
+      }else if(response === "Inex") {
+        alert("Este usuario no existe");
+      }else if(response==="False"){
+        alert("Contraseña Incorrecta");
+      }else{
+        alert("Usuario eliminado con exito");
       }
 
     })

@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  background-color: #B3643C;
+  text-decoration: none;
+  border-radius: 25px;
+  width: 60%;
+  margin: 15px auto;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #944D2D;
+  transform: translateY(-2px);
+}
+
+.btn-primary:focus {
+  outline: 2px dashed #944D2D;
+  outline-offset: 4px;
+}
