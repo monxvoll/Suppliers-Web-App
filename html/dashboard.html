@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard Suppliers</title>
-    <link rel = "stylesheet" href="../css/stylesdashboard.css">
+  <meta charset="UTF-8">
+  <title>Dashboard Suppliers</title>
+  <link rel="stylesheet" href="../css/stylesdashboard.css">
   <style>
     body {
-      background-color: #B3643C
+      background-color: #B3643C;
     }
   </style>
 </head>
 <body>
-<div class ="sidebar">
-    </h4>Menu Proveedores</h4>
+<button id="add-button" class="btn-add">Añadir Proveedor</button>
+<button id="add-buttonTwo" class="btn-addTwo">Añadir Producto</button>
+<div class="sidebar">
+  <h4>Menu Proveedores</h4>
   <div class="menu-container">
     <a class="nav-link active" id="button-supplier">Proveedores</a>
     <select id="select-options" name="options">
@@ -24,20 +26,17 @@
     </select>
   </div>
   <div class="menu-container">
-  <a class="nav-link" id="button-product">Productos</a>
-  <select id="button-select" name="options">
-  </select>
+    <a class="nav-link" id="button-product">Productos</a>
+    <select id="button-select" name="options"></select>
   </div>
 </div>
 
-</div>
-    <div class="content" id="content" >
-        <div class="card">
-            <div class="card-body">
-
-            </div>
-        </div>
+<div class="content" id="content">
+  <div class="card">
+    <div class="card-body">
     </div>
-    <script src="../js/script_dashboard.js"></script>
+  </div>
+</div>
+<script src="../js/script_dashboard.js"></script>
 </body>
 </html>

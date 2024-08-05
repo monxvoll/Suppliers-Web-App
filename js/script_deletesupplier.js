@@ -1,21 +1,24 @@
 document.getElementById('accept-button').addEventListener('click', function() {
-  const id = document.getElementById('input-code-book').value;
-  const fileType = document.getElementById('input-name-book').value;
-  fetch("http://localhost:8080/SupplierAPI/rest/ManagementSupplier/deleteProduct?id="+id+'&fileType='+fileType, {
+  const id = document.getElementById('input-code-book').value.trim();
+  const fileType = document.getElementById('input-name-book').value.trim();
+
+
+  fetch(`http://localhost:8080/SupplierAPI/rest/ManagementSupplier/deleteSupplier?id=${encodeURIComponent(id)}&fileType=${encodeURIComponent(fileType)}`, {
     method: 'DELETE'
   })
     .then(response => response.json())
     .then(response => {
-      if(response === "Null") {
+      if (response === "Null") {
         alert("Por favor llena los campos");
-      }else if(response === "invalidType"){
-        alert("Digite un tipo de archivo valido (json,plain,ser,xml,csv)");
-      }else if(response === "Inex") {
+      } else if (response === "invalidType") {
+        alert("Digite un tipo de archivo válido (json, plain, ser, xml, csv)");
+      } else if (response === "Inex") {
         alert("No existe un proveedor para este id");
-      }else if(response==="True"){
-        alert("Proveedor eliminado con exito");
+      } else if (response === "True") {
+        alert("Proveedor eliminado con éxito");
+      } else {
+        alert("Respuesta inesperada del servidor");
       }
-
     })
-    .catch( error => console.error('Error: ', error));
+    .catch(error => console.error('Error: ', error));
 });

@@ -1,6 +1,6 @@
 function validateUser(){
-  var name = document.getElementById("textUser").value;
-  var password = document.getElementById("textPassword").value;
+  var name = document.getElementById("textUser").value.trim();
+  var password = document.getElementById("textPassword").value.trim();
 
   fetch('http://localhost:8080/SupplierAPI/rest/ManagementUser/getUserByName?name=' +name + '&password='+password)
 
@@ -19,8 +19,8 @@ function validateUser(){
     .catch( error => console.error('Error: ', error));
 }
 function registerUser(){
-  var userName = document.getElementById("textUser").value;
-  var userPassword = document.getElementById("textPassword").value;
+  var userName = document.getElementById("textUser").value.trim();
+  var userPassword = document.getElementById("textPassword").value.trim();
 
   var user = {
     userName: userName,
@@ -52,8 +52,8 @@ function registerUser(){
 
 
 function deleteUser(){
-  var name = document.getElementById("textUser").value;
-  var password = document.getElementById("textPassword").value;
+  var name = document.getElementById("textUser").value.trim();
+  var password = document.getElementById("textPassword").value.trim();
 
   fetch('http://localhost:8080/SupplierAPI/rest/ManagementUser/deleteUser?name=' +name + '&password=' + password,{
     method: 'DELETE'
