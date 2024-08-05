@@ -12,7 +12,7 @@ document.getElementById('accept-button').addEventListener('click', function() {
       if(response === "Null") {
         alert("Por favor llena los campos");
       }else if(response === "invalidType"){
-        alert("Digite un tipo de archivo valido (json,plain,ser,xml,csv)");
+        alert("Digite un tipo de archivo valido (json,txt,ser,xml,csv)");
       }else if(response === "InexS") {
         alert("No existe un proveedor para este id");
       }else if(response==="False"){

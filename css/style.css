@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #2A1F22;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,13 +22,13 @@ form {
 }
 
 h1 {
-  color: #fff;
+  color: gray;
   text-align: center;
   margin-bottom: 30px;
 }
 
 label {
-  color: #fff;
+  color: #CFCFCF;
   display: block;
   margin-bottom: 10px;
   font-size: 18px;

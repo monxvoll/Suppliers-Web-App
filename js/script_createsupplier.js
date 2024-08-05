@@ -33,7 +33,7 @@ document.getElementById('accept-button').addEventListener('click', function() {
       } else if (response === "InvalidPhone") {
         alert("Digite un telefono valido (10 digitos)");
       } else if (response === "InvalidFile") {
-        alert("Digite un tipo de archivo valido (json,plain,ser,xml,csv)");
+        alert("Digite un tipo de archivo valido (json,txt,ser,xml,csv)");
       } else if (response === "Existence") {
         alert("Este id de proveedor ya existe");
       } else if (response === "True") {

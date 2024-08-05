@@ -44,7 +44,7 @@ document.getElementById('accept-button').addEventListener('click', function() {
       } else if (response === "NullFile") {
         alert("Por favor complete el tipo de archivo");
       } else if (response === "InvalidFile") {
-        alert("Digite un tipo de archivo válido (json, plain, ser, xml, csv)");
+        alert("Digite un tipo de archivo válido (json, txt, ser, xml, csv)");
       } else if (response === "InexSupplier") {
         alert("No existe un proveedor con este ID");
       } else if (response === "InvalidProduct") {

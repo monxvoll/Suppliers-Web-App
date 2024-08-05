@@ -8,7 +8,7 @@ body {
 
 .sidebar {
   width: 12.5%;
-  background-color: #B7DFB7;
+  background-color: #B0B0B0;
   padding: 20px;
   height: 100vh;
   position: fixed;
@@ -20,37 +20,33 @@ body {
 }
 
 .sidebar h4 {
-  color: white;
+  color: #2A1F22;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #2A1F22;
+  padding-bottom: 5px;
 }
 
-.btn-add {
+.btn-add, .btn-addTwo {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #22C8D7;
-  color: white;
+  background-color: #CFCFCF;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  font-weight: bold;
 }
 
 .btn-add:hover {
   background-color: #12547D;
 }
-.btn-addTwo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #22C8D7;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-}
+
 
 .btn-addTwo:hover {
   background-color: #12547D;
@@ -60,28 +56,53 @@ body {
   align-items: center;
   margin-bottom: 10px;
 }
+.menu-containerB {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 17px;
+}
 
 .sidebar .nav-link {
   display: block;
-  color: #12547D;
+  color:#0F2F39;
   padding: 10px;
   text-decoration: none;
   border-radius: 4px;
   margin-right: 10px;
 }
-
 .sidebar .nav-link.active,
 .sidebar .nav-link:hover {
-  background-color:#FEDFA2;
-  color: #12547D;
+  background-color:black;
+  color:  #CFCFCF;
 }
 
 .sidebar select {
-  padding: 5px;
+  padding: 10px;
   border-radius: 4px;
   border: 1px solid #12547D;
   background-color: white;
 }
+
+
+select {
+  font-size: 14px;
+  font-weight: bold;
+  width: 65px;
+  padding: 10px 5px 10px 10px; /
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  appearance: none;
+  background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D"http%3A//www.w3.org/2000/svg" viewBox%3D"0 0 24 24" width%3D"24" height%3D"24"%3E%3Cpath fill%3D"%23333" d%3D"M12 16.5l-8-8 1.5-1.5 6.5 6.5 6.5-6.5 1.5 1.5-8 8z"/%3E%3C/svg%3E') no-repeat right 10px center;);
+  background-color: white;
+  background-size: 8px 10px;
+}
+
+select option {
+  font-weight: bold;
+}
+
 
 .content {
   margin-left: 15%;
@@ -93,13 +114,13 @@ body {
 
 .card {
   position: relative;
-  background-color: #581A02;
-  border: 1px solid white;
+  background-color: #97888B;
+  border: #97888B;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin: 10px;
-  width: calc(28% - 20px); /* Ajuste el ancho aquí */
+  width: calc(28% - 20px);
   height: 45%;
   display: inline-block;
   vertical-align: top;
@@ -112,7 +133,7 @@ body {
 
 .card-body {
   padding: 20px;
-  color: white;
+  color: #CFCFCF;
 }
 
 #delete-button {
@@ -173,7 +194,7 @@ body {
   display: inline-block;
   padding: 10px 15px;
   color: white;
-  background-color: #B3643C;
+  background-color: #0F1012;
   text-decoration: none;
   border-radius: 4px;
   margin-top: 20px;
@@ -181,11 +202,11 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #22C8D7;
+  background-color: #12547D;
   transform: translateY(-2px);
 }
 
-#button-select {
+button-select {
   display: none;
 }
 
@@ -203,4 +224,13 @@ body {
     width: 100%;
     height: 220px;
   }
+}
+.button-supplier, .button-product{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 5px;
 }

@@ -33,7 +33,7 @@ document.getElementById('accept-button').addEventListener('click', function() {
       } else if (response === "NullFile") {
         alert("Por favor digite un tipo de archivo");
       } else if (response === "invalidType") {
-        alert("Digite un tipo de archivo valido (json,plain,ser,xml,csv)");
+        alert("Digite un tipo de archivo valido (json,txt,ser,xml,csv)");
       } else if (response === "One") {
         alert("Por favor complete al menos una variable a actualizar");
       } else if (response === "Email") {
