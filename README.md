@@ -43,4 +43,4 @@ Contiene los archivos JavaScript que manejan la lógica de interacción con la A
 
 1. Clona el repositorio:
    ```bash
-   git clone <URL del repositorio>
+   git clone https://github.com/monxvoll/Suppliers-Web-App
